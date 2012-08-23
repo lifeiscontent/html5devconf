@@ -1,0 +1,52 @@
+/*   Theme
+ *
+ *   Used for styling the theme of the site.
+ *
+ *
+-----------------------------------------------------------------------------*/
+
+html {
+	background-color: #f4f4f4;
+}
+
+hr {
+	border-color: #c0c0c0;
+}
+
+.feature-header {
+	border-color: #090909;
+}
+.feature-item, .feature-paragraph {
+	color: #5d5d5d;
+}
+.feature-read-link {
+	color: #fe9b00;
+}
+
+.primary-header-nav {
+	a {
+		color: #fe9b00;
+		&:hover {
+			color: #090909;
+		}
+	}
+}
+.primary-header-email {
+	color: #999898;
+}
+
+.primary-footer {
+	background-color: #e2e2e2;
+	&, .primary-footer-nav a {
+		color: #5d5d5d;
+	}
+}
+
+.hero-caption {
+	background-color: #090909;
+	color: #999898;
+	@include single-transition(width, 0.6s, ease-in-out);
+	a {
+		color: #fe9b00;			
+	}
+}

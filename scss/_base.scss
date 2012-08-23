@@ -1,0 +1,124 @@
+/*   Base
+ *
+ *   Used for styling the structure of content of the site
+ *
+ *
+-----------------------------------------------------------------------------*/
+
+
+html {
+	font: normal 12px/12px 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+hr {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	margin: 20px 0;
+}
+
+.primary-header {
+	@media screen and (max-width:960px) {
+		.primary-header-logo {
+			width: 100%;
+		}
+		.primary-header-content {
+			width: 100%;
+		}
+	}
+}
+
+.primary-header-nav {
+	@extend .cf;
+	padding-top: 40px;
+	ul {
+		float: right;
+		@extend .cf;
+	}
+	li {
+		float: left;
+		margin-left: 40px;
+	}
+	a {
+		line-height: 24px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+.primary-header-email {
+	text-align: right;
+	font-size: 13px;
+}
+
+.hero {
+	position: relative;
+}
+.hero-caption {
+	@extend .cf;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	span, a {
+		padding: 8px 12px;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	span {
+		float: left;
+	}
+	a {
+		float: right;
+	}
+	@media screen and (min-width: 960px) {
+		bottom: 5%;
+		left: 5%;
+		width: 43.75%;
+		span, a {
+			font-size: 14px;
+		}
+	}
+}
+
+.connect-item a {
+	display: block;
+}
+
+.l-wrapper {
+	margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+}
+.push, .primary-footer {
+	height: 80px;
+}
+.primary-footer {
+	font-size: 12px;
+	padding: 8px 0;
+	line-height: 18px;
+}
+
+.primary-footer-nav {
+	margin-bottom: 10px;
+	a {
+		line-height: 18px;
+	}
+}
+
+/* unsure what to do with these */
+.icon.medium.black.arrow {
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.icon.small.black.arrow {
+	margin-bottom: 2px;
+	margin-right: 2px;
+}

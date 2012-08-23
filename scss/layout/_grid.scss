@@ -1,0 +1,71 @@
+/*   Layout - Grid
+ *
+ *   Used for spacing everything out into a fluid grid
+ *   if you'd like to use a fixed size just put a
+        pixel width on the top most container.
+ *
+ *   line is used to wrap the entire row of content you are working with
+ *   unit is used to specify a unit of the grid, a second parameter is used to
+        specifiy the size of the grid e.g ( .size1of4 )
+ *   lastUnit is used on the last item in the row; NOTES: don't use lastUnit on
+        a size1of1 unit I've found problems in firefox doing this
+ *
+ *
+-----------------------------------------------------------------------------*/
+
+
+.line{
+    *zoom: 1;
+    &::after{
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+.unit{float: left;}
+.size1of1{float: none;}
+.size1of2{width: 50%;}
+.size1of3{width: 33.33333%;}
+.size2of3{width: 66.66666%;}
+.size1of4{width: 25%;}
+.size3of4{width: 75%;}
+.size1of5{width: 20%;}
+.size2of5{width: 40%;}
+.size3of5{width: 60%;}
+.size4of5{width: 80%;}
+.lastUnit {
+    display: table-cell;
+    *display: block;
+    *zoom: 1;
+    float: none;
+    _position: relative;
+    _left: -3px;
+    _margin-right: -3px;
+    width: auto;
+    &::after{
+        content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+        visibility: hidden;
+        clear: both;
+        height: 0 !important;
+        display: block;
+        line-height: 0;
+    }
+}
+
+
+
+/* Grid::debug */
+
+// .line{background-color:#e2e2e2;}
+// .size1of1{background-color:pink;}
+// .size1of2{background-color:red;}
+// .size1of3{background-color:orange;}
+// .size2of3{background-color: yellow;}
+// .size1of4{background-color:lime;}
+// .size3of4{background-color:green;}
+// .size1of5{background-color:aqua;}
+// .size2of5{background-color:blue;}
+// .size3of5{background-color:purple;}
+// .size4of5{background-color:magenta;}

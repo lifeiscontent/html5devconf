@@ -1,0 +1,611 @@
+/*   RESET
+-----------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*   Helpers
+ *
+ *   Used for Common layout/content fixing
+ *
+ *
+-----------------------------------------------------------------------------*/
+.cf, .primary-header-nav, .primary-header-nav ul, .hero-caption {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+.cf::before, .primary-header-nav::before, .primary-header-nav ul::before, .hero-caption::before, .cf::after, .primary-header-nav::after, .primary-header-nav ul::after, .hero-caption::after {
+  content: "";
+  display: table;
+}
+.cf::after, .primary-header-nav::after, .primary-header-nav ul::after, .hero-caption::after {
+  clear: both;
+}
+
+.cb {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fn {
+  float: none;
+}
+
+.tal {
+  text-align: left;
+}
+
+.tar {
+  text-align: right;
+}
+
+.tac {
+  text-align: center;
+}
+
+.vat {
+  vertical-align: top;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.vab {
+  vertical-align: bottom;
+}
+
+/*   Layout - Constrained
+ *
+ *   Used for keeping the layout constrained at 960px and optionally letting
+		the parent background bleed to the edge of the page.
+ *
+ *
+-----------------------------------------------------------------------------*/
+.l-constrained {
+  margin: auto;
+  width: 320px;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -ms-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+@media screen and (max-width:640px) {
+  .l-constrained .size1of3 {
+    width: 100%;
+    display: block;
+  }
+  .l-constrained .size1of4 {
+    width: 100%;
+    display: block;
+  }
+  .l-constrained .size3of4 {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (min-width:640px) and (max-width:960px) {
+  .l-constrained {
+    width: 640px;
+  }
+  .l-constrained .portfolio-image {
+    width: 50%;
+  }
+  .l-constrained .portfolio-image.lastUnit {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+}
+@media screen and (min-width:960px) {
+  .l-constrained {
+    width: 960px;
+  }
+}
+
+/*   Layout - Grid
+ *
+ *   Used for spacing everything out into a fluid grid
+ *   if you'd like to use a fixed size just put a
+        pixel width on the top most container.
+ *
+ *   line is used to wrap the entire row of content you are working with
+ *   unit is used to specify a unit of the grid, a second parameter is used to
+        specifiy the size of the grid e.g ( .size1of4 )
+ *   lastUnit is used on the last item in the row; NOTES: don't use lastUnit on
+        a size1of1 unit I've found problems in firefox doing this
+ *
+ *
+-----------------------------------------------------------------------------*/
+.line {
+  *zoom: 1;
+}
+.line::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.unit {
+  float: left;
+}
+
+.size1of1 {
+  float: none;
+}
+
+.size1of2 {
+  width: 50%;
+}
+
+.size1of3 {
+  width: 33.33333%;
+}
+
+.size2of3 {
+  width: 66.66666%;
+}
+
+.size1of4 {
+  width: 25%;
+}
+
+.size3of4 {
+  width: 75%;
+}
+
+.size1of5 {
+  width: 20%;
+}
+
+.size2of5 {
+  width: 40%;
+}
+
+.size3of5 {
+  width: 60%;
+}
+
+.size4of5 {
+  width: 80%;
+}
+
+.lastUnit {
+  display: table-cell;
+  *display: block;
+  *zoom: 1;
+  float: none;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px;
+  width: auto;
+}
+.lastUnit::after {
+  content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+  visibility: hidden;
+  clear: both;
+  height: 0 !important;
+  display: block;
+  line-height: 0;
+}
+
+/* Grid::debug */
+/*   Layout - Wrapper
+ *
+ *   Used in conjunction with .push to push the footer
+ 		down to the bottom of the page.
+ *
+ *
+-----------------------------------------------------------------------------*/
+.l-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+/*   Module - Blog
+ *
+ *   Used for blog post(s)
+ *
+ *
+-----------------------------------------------------------------------------*/
+.blog {
+  padding-bottom: 18px;
+}
+
+.blog-header {
+  font-size: 14px;
+  padding-bottom: 14px;
+  font-weight: bold;
+}
+
+/*   Module - Connect
+ *
+ *   Used for social networks
+ *
+ *
+-----------------------------------------------------------------------------*/
+.connect {
+  padding-bottom: 18px;
+}
+
+.connect-header {
+  font-size: 14px;
+  padding-bottom: 14px;
+  font-weight: bold;
+}
+
+.connect-item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*   Module - Feature
+ *
+ *   Used for a Feature Column
+ *
+ *
+-----------------------------------------------------------------------------*/
+.feature {
+  width: 90%;
+  margin: 16px auto;
+}
+
+.feature-header {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 6px solid;
+}
+
+.feature-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.feature-paragraph {
+  line-height: 20px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.feature-read-link {
+  font-weight: bold;
+}
+
+/*   Module - Hero
+ *
+ *   Used for major call-outs on a page
+ *
+ *
+-----------------------------------------------------------------------------*/
+.hero img {
+  max-width: 100%;
+  *width: 100%;
+}
+
+/*   Module - Icon
+ *
+ *   Used for common icons throughout the site
+ *
+ *
+-----------------------------------------------------------------------------*/
+.icon {
+  background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  *behavior: url("iepngfix.htc");
+}
+.icon.is-replacement {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+.icon.huge.orange.logo {
+  background-position: 0 0;
+  width: 183px;
+  height: 100px;
+}
+.icon.large.orange.logo {
+  background-position: 0 -100px;
+  width: 119px;
+  height: 64px;
+}
+.icon.medium.black.arrow {
+  background-position: 0 -292px;
+  width: 11px;
+  height: 7px;
+}
+.icon.medium.blue.twitter {
+  background-position: 0 -196px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.blue.facebook {
+  background-position: 0 -228px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.gray.flickr {
+  background-position: 0 -260px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.orange.rss {
+  background-position: 0 -164px;
+  width: 32px;
+  height: 32px;
+}
+.icon.small.black.arrow {
+  background-position: 0 -299px;
+  width: 9px;
+  height: 5px;
+}
+
+/*   Module - Portfolio
+ *
+ *   Used for a Portfolio Column
+ *
+ *
+-----------------------------------------------------------------------------*/
+.portfolio-image {
+  text-align: center;
+}
+
+.portfolio-header {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 18px;
+}
+
+/*   Base
+ *
+ *   Used for styling the structure of content of the site
+ *
+ *
+-----------------------------------------------------------------------------*/
+html {
+  font: normal 12px/12px "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  margin: 20px 0;
+}
+
+@media screen and (max-width:960px) {
+  .primary-header .primary-header-logo {
+    width: 100%;
+  }
+  .primary-header .primary-header-content {
+    width: 100%;
+  }
+}
+
+.primary-header-nav {
+  padding-top: 40px;
+}
+.primary-header-nav ul {
+  float: right;
+}
+.primary-header-nav li {
+  float: left;
+  margin-left: 40px;
+}
+.primary-header-nav a {
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.primary-header-email {
+  text-align: right;
+  font-size: 13px;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.hero-caption span, .hero-caption a {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.hero-caption span {
+  float: left;
+}
+.hero-caption a {
+  float: right;
+}
+@media screen and (min-width: 960px) {
+  .hero-caption {
+    bottom: 5%;
+    left: 5%;
+    width: 43.75%;
+  }
+  .hero-caption span, .hero-caption a {
+    font-size: 14px;
+  }
+}
+
+.connect-item a {
+  display: block;
+}
+
+.l-wrapper {
+  margin: 0 auto -80px;
+  /* the bottom margin is the negative value of the footer's height */
+}
+
+.push, .primary-footer {
+  height: 80px;
+}
+
+.primary-footer {
+  font-size: 12px;
+  padding: 8px 0;
+  line-height: 18px;
+}
+
+.primary-footer-nav {
+  margin-bottom: 10px;
+}
+.primary-footer-nav a {
+  line-height: 18px;
+}
+
+/* unsure what to do with these */
+.icon.medium.black.arrow {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.icon.small.black.arrow {
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+
+/*   Theme
+ *
+ *   Used for styling the theme of the site.
+ *
+ *
+-----------------------------------------------------------------------------*/
+html {
+  background-color: #f4f4f4;
+}
+
+hr {
+  border-color: #c0c0c0;
+}
+
+.feature-header {
+  border-color: #090909;
+}
+
+.feature-item, .feature-paragraph {
+  color: #5d5d5d;
+}
+
+.feature-read-link {
+  color: #fe9b00;
+}
+
+.primary-header-nav a {
+  color: #fe9b00;
+}
+.primary-header-nav a:hover {
+  color: #090909;
+}
+
+.primary-header-email {
+  color: #999898;
+}
+
+.primary-footer {
+  background-color: #e2e2e2;
+}
+.primary-footer, .primary-footer .primary-footer-nav a {
+  color: #5d5d5d;
+}
+
+.hero-caption {
+  background-color: #090909;
+  color: #999898;
+  -webkit-transition: width 0.6s ease-in-out;
+  -moz-transition: width 0.6s ease-in-out;
+  -ms-transition: width 0.6s ease-in-out;
+  -o-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+}
+.hero-caption a {
+  color: #fe9b00;
+}
+
+/*   State
+ *
+ *   Used for Global (Modifications/State Changes) of a particular module, layout or the site.
+ *
+ *
+-----------------------------------------------------------------------------*/
+/* box position debug */

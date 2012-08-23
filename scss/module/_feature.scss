@@ -1,0 +1,28 @@
+/*   Module - Feature
+ *
+ *   Used for a Feature Column
+ *
+ *
+-----------------------------------------------------------------------------*/
+
+.feature {
+	width: 90%;
+	margin: 16px auto;
+}
+.feature-header {
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 6px solid;
+}
+.feature-item {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.feature-paragraph {
+	line-height: 20px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.feature-read-link {
+	font-weight: bold;
+}

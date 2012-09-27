@@ -16,12 +16,12 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
 }
 
-body {
+html {
   line-height: 1;
 }
 
@@ -126,11 +126,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 320px;
   -webkit-transition: width 0.6s ease-in-out;
   -moz-transition: width 0.6s ease-in-out;
-  -ms-transition: width 0.6s ease-in-out;
   -o-transition: width 0.6s ease-in-out;
   transition: width 0.6s ease-in-out;
 }
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   .l-constrained .size1of3 {
     width: 100%;
     display: block;
@@ -144,7 +143,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
   }
 }
-@media screen and (min-width:640px) and (max-width:960px) {
+@media screen and (min-width: 640px) and (max-width: 960px) {
   .l-constrained {
     width: 640px;
   }
@@ -157,7 +156,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     *zoom: 1;
   }
 }
-@media screen and (min-width:960px) {
+@media screen and (min-width: 960px) {
   .l-constrained {
     width: 960px;
   }
@@ -177,9 +176,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  *
  *
 -----------------------------------------------------------------------------*/
-.line {
-  *zoom: 1;
-}
 .line::after {
   content: ".";
   display: block;
@@ -234,12 +230,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .lastUnit {
   display: table-cell;
-  *display: block;
-  *zoom: 1;
   float: none;
-  _position: relative;
-  _left: -3px;
-  _margin-right: -3px;
   width: auto;
 }
 .lastUnit::after {
@@ -271,154 +262,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  *
  *
 -----------------------------------------------------------------------------*/
-.blog {
-  padding-bottom: 18px;
-}
-
-.blog-header {
-  font-size: 14px;
-  padding-bottom: 14px;
-  font-weight: bold;
-}
-
 /*   Module - Connect
  *
  *   Used for social networks
  *
  *
 -----------------------------------------------------------------------------*/
-.connect {
-  padding-bottom: 18px;
-}
-
-.connect-header {
-  font-size: 14px;
-  padding-bottom: 14px;
-  font-weight: bold;
-}
-
-.connect-item {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-
 /*   Module - Feature
  *
  *   Used for a Feature Column
  *
  *
 -----------------------------------------------------------------------------*/
-.feature {
-  width: 90%;
-  margin: 16px auto;
-}
-
-.feature-header {
-  font-size: 18px;
-  font-weight: bold;
-  border-bottom: 6px solid;
-}
-
-.feature-item {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.feature-paragraph {
-  line-height: 20px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.feature-read-link {
-  font-weight: bold;
-}
-
 /*   Module - Hero
  *
  *   Used for major call-outs on a page
  *
  *
 -----------------------------------------------------------------------------*/
-.hero img {
-  max-width: 100%;
-  *width: 100%;
-}
-
 /*   Module - Icon
  *
  *   Used for common icons throughout the site
  *
  *
 -----------------------------------------------------------------------------*/
-.icon {
-  background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  *behavior: url("iepngfix.htc");
-}
-.icon.is-replacement {
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-}
-.icon.huge.orange.logo {
-  background-position: 0 0;
-  width: 183px;
-  height: 100px;
-}
-.icon.large.orange.logo {
-  background-position: 0 -100px;
-  width: 119px;
-  height: 64px;
-}
-.icon.medium.black.arrow {
-  background-position: 0 -292px;
-  width: 11px;
-  height: 7px;
-}
-.icon.medium.blue.twitter {
-  background-position: 0 -196px;
-  width: 32px;
-  height: 32px;
-}
-.icon.medium.blue.facebook {
-  background-position: 0 -228px;
-  width: 32px;
-  height: 32px;
-}
-.icon.medium.gray.flickr {
-  background-position: 0 -260px;
-  width: 32px;
-  height: 32px;
-}
-.icon.medium.orange.rss {
-  background-position: 0 -164px;
-  width: 32px;
-  height: 32px;
-}
-.icon.small.black.arrow {
-  background-position: 0 -299px;
-  width: 9px;
-  height: 5px;
-}
-
 /*   Module - Portfolio
  *
  *   Used for a Portfolio Column
  *
  *
 -----------------------------------------------------------------------------*/
-.portfolio-image {
-  text-align: center;
+.line {
+  *zoom: 1;
 }
 
-.portfolio-header {
-  font-weight: bold;
-  font-size: 18px;
-  padding-bottom: 18px;
+.lastUnit {
+  *display: block;
+  *zoom: 1;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px;
 }
 
 /*   Base
@@ -445,7 +328,7 @@ hr {
   margin: 20px 0;
 }
 
-@media screen and (max-width:960px) {
+@media screen and (max-width: 960px) {
   .primary-header .primary-header-logo {
     width: 100%;
   }
@@ -594,7 +477,6 @@ hr {
   color: #999898;
   -webkit-transition: width 0.6s ease-in-out;
   -moz-transition: width 0.6s ease-in-out;
-  -ms-transition: width 0.6s ease-in-out;
   -o-transition: width 0.6s ease-in-out;
   transition: width 0.6s ease-in-out;
 }
@@ -608,4 +490,124 @@ hr {
  *
  *
 -----------------------------------------------------------------------------*/
-/* box position debug */
+.blog {
+  padding-bottom: 18px;
+}
+
+.blog-header {
+  font-size: 14px;
+  padding-bottom: 14px;
+  font-weight: bold;
+}
+
+.connect {
+  padding-bottom: 18px;
+}
+
+.connect-header {
+  font-size: 14px;
+  padding-bottom: 14px;
+  font-weight: bold;
+}
+
+.connect-item {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.feature {
+  width: 90%;
+  margin: 16px auto;
+}
+
+.feature-header {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 6px solid;
+}
+
+.feature-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.feature-paragraph {
+  line-height: 20px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.feature-read-link {
+  font-weight: bold;
+}
+
+.hero img {
+  max-width: 100%;
+  *width: 100%;
+}
+
+.icon {
+  background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  *behavior: url("iepngfix.htc");
+}
+.icon.is-replacement {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+.icon.huge.orange.logo {
+  background-position: 0 0;
+  width: 183px;
+  height: 100px;
+}
+.icon.large.orange.logo {
+  background-position: 0 -100px;
+  width: 119px;
+  height: 64px;
+}
+.icon.medium.black.arrow {
+  background-position: 0 -292px;
+  width: 11px;
+  height: 7px;
+}
+.icon.medium.blue.twitter {
+  background-position: 0 -196px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.blue.facebook {
+  background-position: 0 -228px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.gray.flickr {
+  background-position: 0 -260px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.orange.rss {
+  background-position: 0 -164px;
+  width: 32px;
+  height: 32px;
+}
+.icon.small.black.arrow {
+  background-position: 0 -299px;
+  width: 9px;
+  height: 5px;
+}
+
+.portfolio-image {
+  text-align: center;
+}
+
+.portfolio-header {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 18px;
+}
+
+/* box model debug */

@@ -5,16 +5,18 @@
  *
 -----------------------------------------------------------------------------*/
 
-.connect {
-	padding-bottom: 18px;
-}
-.connect-header {
-	font-size: 14px;
-	padding-bottom: 14px;
-	font-weight: bold;
-}
-.connect-item {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+@mixin connect {
+	.connect {
+		padding-bottom: 18px;
+	}
+	.connect-header {
+		font-size: 14px;
+		padding-bottom: 14px;
+		font-weight: bold;
+	}
+	.connect-item {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+	}
 }

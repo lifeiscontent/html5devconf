@@ -5,12 +5,13 @@
  *
 -----------------------------------------------------------------------------*/
 
-.portfolio-image {
-	text-align: center;
+@mixin portfolio {
+	.portfolio-image {
+		text-align: center;
+	}
+	.portfolio-header {
+		font-weight: bold;
+		font-size: 18px;
+		padding-bottom: 18px;
+	}
 }
-.portfolio-header {
-	font-weight: bold;
-	font-size: 18px;
-	padding-bottom: 18px;
-}
-

@@ -13,10 +13,17 @@
 	"module/hero",
 	"module/icon",
 	"module/portfolio",
+	"ie",
 	"base",
 	"theme",
 	"state";
 
+@include blog;
+@include connect;
+@include feature;
+@include hero;
+@include icon;
+@include portfolio;
 
-/* box position debug */
-body * { outline: 1px dotted; }
+/* box model debug */
+// body * { outline: 1px dotted; }

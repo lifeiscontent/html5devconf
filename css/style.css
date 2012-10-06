@@ -328,6 +328,14 @@ hr {
   margin: 20px 0;
 }
 
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
 @media screen and (max-width: 960px) {
   .primary-header .primary-header-logo {
     width: 100%;
@@ -495,7 +503,6 @@ hr {
 }
 
 .blog-header {
-  font-size: 14px;
   padding-bottom: 14px;
   font-weight: bold;
 }
@@ -505,7 +512,6 @@ hr {
 }
 
 .connect-header {
-  font-size: 14px;
   padding-bottom: 14px;
   font-weight: bold;
 }
@@ -549,9 +555,12 @@ hr {
 
 .icon {
   background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
+  display: -moz-inline-stack;
   display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
   *display: inline;
-  *zoom: 1;
   *behavior: url("iepngfix.htc");
 }
 .icon.is-replacement {
@@ -606,7 +615,6 @@ hr {
 
 .portfolio-header {
   font-weight: bold;
-  font-size: 18px;
   padding-bottom: 18px;
 }
 

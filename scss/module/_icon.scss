@@ -9,9 +9,7 @@
     .icon {
         $icons-sprite: sprite-map("../img/sprite/icon/*.png");
         background: transparent $icons-sprite no-repeat;
-        display: inline-block;
-        *display: inline;
-        *zoom: 1;
+        @include inline-block;
         *behavior: url("iepngfix.htc");
         &.is-replacement {
             font: 0/0 a;

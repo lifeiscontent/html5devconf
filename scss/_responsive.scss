@@ -1,0 +1,30 @@
+@media (min-width:$rowWidth) {
+  .row {
+    width: $rowWidth;
+  }
+  .hero-caption {
+    width: 50%;
+    bottom: 44px;
+    left: 25px;
+  }
+  // @include sticky-footer(100px, ".l-wrapper", ".push", ".primary-footer");
+  .primary-footer { height: 80px; }
+  .primary-header-menu { @include base-nav; }
+  .primary-header-menu-item { @include base-nav-item; }
+  .primary-header-menu-link { @include base-nav-link; }
+}
+@media (max-width:$rowWidth) {
+  .row {
+    .column,
+    .columns { width: 100%; }
+  }
+  @for $i from 1 through $totalColumns - 1 {
+    .push-#{convertNumberToWords($i)} { #{$defaultFloat}: 0; }
+    .pull-#{convertNumberToWords($i)} { #{$defaultOpposite}: 0; }
+  }
+  @for $i from 1 through $mobileTotalColumns {
+      .mobile-#{convertNumberToWords($i)} { width: gridCalc($i, $mobileTotalColumns) !important; }
+  }
+  .primary-footer-menu-item { display: block; padding: 10px 0; }
+  .spacer { display: none; }
+}

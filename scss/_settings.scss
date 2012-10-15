@@ -1,0 +1,18 @@
+$rowWidth: 960px !default;
+$columnGutter: 20px !default;
+$totalColumns: 12 !default;
+$mobileTotalColumns: 6 !default;
+
+// Text Direction Settings
+
+$textDirection: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
+$defaultFloat: left !default; // Change this to 'right' for right-to-left languages
+$defaultOpposite: right !default; // Change this to 'left' for right-to-left languages
+
+@if $textDirection == ltr {
+  $defaultFloat: left;
+  $defaultOpposite: right;
+} @else {
+  $defaultFloat: right;
+  $defaultOpposite: left;
+}

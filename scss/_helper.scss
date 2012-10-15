@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    $HELPER
+\*------------------------------------*/
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.fl` class to the markup.
+ */
+
+.cf { @include clearfix; }
+.cb { clear: both; }
+
+.fl { @include float-left; }
+.fr { @include float-right; }
+.fn { float: none; }
+.tal { text-align: left; }
+.tac { text-align: center; }
+.tar { text-align: right; }
+
+.text-center { @extend .tac; }
+
+/**
+ * Align items to the right where they imply progression/movement forward, e.g.:
+ *
+   <p class=proceed><a href=#>Read more...</a></p>
+ *
+ */
+.proceed { @extend .tar; }
+
+
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+.informative { cursor:help; }

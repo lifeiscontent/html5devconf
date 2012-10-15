@@ -1,0 +1,29 @@
+@mixin hero {
+  /*------------------------------------*\
+      $Hero
+  \*------------------------------------*/
+  /**
+   * Hero module for huge images on landing pages.
+   * e.g.:
+   *
+
+    <div class="hero">
+      <img src="img/gallery/1.jpg" alt="Hero Image">
+      <div class="hero-caption">
+        <span>Here's some nice work</span>
+        <a href="#" class="hero-caption-link">View Portfolio</a>
+      </div>
+    </div>
+
+   *
+   */
+  .hero {
+    position: relative;
+    img { vertical-align: bottom; }
+  }
+    .hero-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+}

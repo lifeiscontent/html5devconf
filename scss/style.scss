@@ -1,29 +1,19 @@
-/*   RESET
------------------------------------------------------------------------------*/
 @import
-	"compass/css3",
-	"compass/reset",
-	"helpers",
-	"layout/constrained",
-	"layout/grid",
-	"layout/wrapper",
-	"module/blog",
-	"module/connect",
-	"module/feature",
-	"module/hero",
-	"module/icon",
-	"module/portfolio",
-	"ie",
-	"base",
-	"theme",
-	"state";
+  "compass/css3",
+  "compass/utilities",
+  "compass/reset",
+  "compass/layout/sticky-footer",
+  "helper",
+  "settings",
+  "functions/all",
+  "components/all",
+  "ie",
+  "base",
+  "responsive",
+  "theme",
+  "state";
 
-@include blog;
-@include connect;
-@include feature;
-@include hero;
 @include icon;
-@include portfolio;
-
-/* box model debug */
-// body * { outline: 1px dotted; }
+@include nav;
+// box model debug
+// body * { outline: 1px dashed; }

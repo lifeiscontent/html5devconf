@@ -1,153 +1,192 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <title>Template</title>
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
-  <script type="text/javascript" src="js/libs/iepngfix_tilebg.js"></script>  <!-- Used to tile images in IE -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://modernizr.com/downloads/modernizr.js"></script>  <!-- Feature Detection -->
-  <script type="text/javascript" src="http://scottjehl.github.com/Respond/respond.src.js"></script>  <!-- Media Queries in IE -->
-</head>
-<body>
-  <div class="l-wrapper">
-    <!-- Wrapper used for pushing footer down -->
-    <div class="l-constrained primary-header">
-      <!-- Header -->
-      <div class="line">
-        <div class="unit size1of4 primary-header-logo">
-          <i class="huge orange logo icon is-replacement">
-            <h1 class="replacement-text">Creative Studio</h1>
-          </i>
-        </div>
-        <div class="unit size3of4 lastUnit primary-header-content">
-          <div class="primary-header-nav">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="primary-header-email">info@CreativeStudio.com</div>
-        </div>
-      </div>
-      <!-- Header -->
-    </div>
-    <div class="l-constrained">
-      <hr />
-    </div>
-    <div class="l-constrained">
-      <div class="line">
-        <div class="hero unit1of1">
-          <!-- Module | Hero -->
-          <img src="img/gallery/1.jpg" alt="Hero Image">
-          <div class="hero-caption l-constrained">
-            <span>Here's some nice work</span>
-            <a href="#">View Portfolio</a>
-          </div>
-          <!-- Module | Hero -->
-        </div>
-      </div>
-      <hr />
-      <div class="line">
-        <div class="unit size1of3">
-          <div class="feature">
-            <!-- Module | Feature -->
-            <h2 class="feature-header">
-              <i class="medium black arrow icon vam"></i>
-              About Us
-            </h2>
-            <p class="feature-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque quis nulla id orci malesuada porta posuere quis massa.
-              Nunc vitae purus non augue scelerisque ultricies vitae et velit.
-              Sed vitae lectus id sem lobortis scelerisque.
-              Praesent eget consequat libero.
-            </p>
-            <a href="#" class="feature-read-link">
-              <i class="small black arrow icon vam"></i>
-              Read
+  <head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <script type="text/javascript" src="js/libs/iepngfix_tilebg.js"></script>   <!-- Used to tile images in IE  -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://modernizr.com/downloads/modernizr.js"></script>   <!-- Feature Detection  -->
+    <script type="text/javascript" src="http://scottjehl.github.com/Respond/respond.src.js"></script>   <!-- Media Queries in IE --> 
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <!-- Wrapper used for pushing footer down and adding 10px gutters on the sides  -->
+      <div class="row">
+        <div class="three columns">
+          <div class="columns-inner">
+            <a href="#" class="primary-header-logo">
+              <i class="huge orange logo icon has-image-replacement">
+                <h1 class="image-replacement-text">Creative Studio</h1>
+              </i>
             </a>
-            <!-- Module | Feature -->
           </div>
         </div>
-        <div class="unit size1of3">
-          <div class="feature">
-            <!-- Module | Feature -->
-            <h2 class="feature-header">
-              <i class="medium black arrow icon vam"></i>
-              Our Benefits
-            </h2>
-            <ul>
-              <li class="feature-item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque quis nulla id orci malesuada porta posuere quis massa.
-              </li>
-              <li class="feature-item">
-                Nunc vitae purus non augue scelerisque ultricies vitae et velit.
-                Sed vitae lectus id sem lobortis scelerisque. Praesent eget consequat
-              </li>
-              <li class="feature-item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque quis nulla id orci malesuada porta posuere quis massa.
-              </li>
+        <div class="nine columns lastColumn">
+          <div class="primary-header-content columns-inner">
+            <ul class="primary-header-menu nav">
+              <li class="primary-header-menu-item"><a href="#">Home</a></li>
+              <li class="primary-header-menu-item"><a href="#">About</a></li>
+              <li class="primary-header-menu-item"><a href="#">Portfolio</a></li>
+              <li class="primary-header-menu-item"><a href="#">Services</a></li>
+              <li class="primary-header-menu-item"><a href="#">Blog</a></li>
+              <li class="primary-header-menu-item"><a href="#">Contact Us</a></li>
             </ul>
-            <!-- Module | Feature -->
-          </div>
-        </div>
-        <div class="unit size1of3 lastUnit">
-          <div class="feature">
-            <!-- Module | Feature -->
-            <h2 class="feature-header">
-              <i class="medium black arrow icon vam"></i>
-              Testimonials
-            </h2>
-            <p class="feature-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque quis nulla id orci malesuada porta posuere quis massa.
-              Nunc vitae purus non augue scelerisque ultricies vitae et velit.
-              Sed vitae lectus id sem lobortis scelerisque.
-            </p>
-            <span>Rafi, Graphicsfuel.com</span>
-            <!-- Module | Feature -->
+            <div class="primary-header-email">info@CreativeStudio.com</div>
           </div>
         </div>
       </div>
-      <hr />
-      <div class="line portfolio">
-        <!-- Module | Portfolio -->
-        <div class="line">
-          <div class="unit size1of1 lastUnit">
-            <h2 class="portfolio-header">
-              <i class="medium black arrow icon vam"></i>
-              Our Portfolio
-            </h2>
+      <div class="row">
+        <div class="twelve columns">
+          <div class="columns-inner">
+            <hr class="primary-hr" />
           </div>
         </div>
-        <div class="line">
-          <div class="unit size1of4 portfolio-image">
-            <img src="img/gfx_portfolio-image_1.jpg" width="215" height="135" alt="Gfx Portfolio Image 1" />
-          </div>
-          <div class="unit size1of4 portfolio-image">
-            <img src="img/gfx_portfolio-image_2.jpg" width="215" height="135" alt="Gfx Portfolio Image 2" />
-          </div>
-          <div class="unit size1of4 portfolio-image">
-            <img src="img/gfx_portfolio-image_3.jpg" width="215" height="135" alt="Gfx Portfolio Image 3" />
-          </div>
-          <div class="unit size1of4 lastUnit portfolio-image">
-            <img src="img/gfx_portfolio-image_4.jpg" width="215" height="135" alt="Gfx Portfolio Image 4" />
-          </div>
-        </div>
-        <!-- Module | Portfolio -->
       </div>
-      <hr />
-      <div class="line">
-          <div class="unit size3of4 blog">
-            <!-- Module | Blog -->
+      <div class="row">
+        <div class="twelve columns">
+          <div class="hero columns-inner">
+            <img src="img/gallery/1.jpg" alt="Hero Image">
+            <div class="hero-caption row">
+              <div class="six columns mobile-three">
+                <div class="columns-inner">
+                  <span>Here's some nice work</span>
+                </div>
+              </div>
+              <div class="six columns mobile-three lastColumn">
+                <div class="columns-inner proceed">
+                  <a href="#" class="hero-caption-link">View Portfolio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <div class="columns-inner">
+            <hr class="primary-hr" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <div class="columns-inner">
+            <div class="feature">
+              <h2 class="feature-header">
+                <i class="medium black arrow icon vam"></i>
+                About Us
+              </h2>
+              <p class="feature-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque quis nulla id orci malesuada porta posuere quis massa.
+                Nunc vitae purus non augue scelerisque ultricies vitae et velit.
+                Sed vitae lectus id sem lobortis scelerisque.
+                Praesent eget consequat libero.
+              </p>
+              <div class="proceed">
+                <a href="#" class="feature-read-link">
+                  Read More
+                  <i class="small black arrow icon vam"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="four columns">
+          <div class="columns-inner">
+            <div class="feature">
+              <h2 class="feature-header">
+                <i class="medium black arrow icon vam"></i>
+                Our Benefits
+              </h2>
+              <ul class="feature-list">
+                <li class="feature-item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque quis nulla id orci malesuada porta posuere quis massa.
+                </li>
+                <li class="feature-item">
+                  Nunc vitae purus non augue scelerisque ultricies vitae et velit.
+                  Sed vitae lectus id sem lobortis scelerisque. Praesent eget consequat
+                </li>
+                <li class="feature-item">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque quis nulla id orci malesuada porta posuere quis massa.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="four columns lastColumn">
+          <div class="columns-inner">
+            <div class="feature">
+              <h2 class="feature-header">
+                <i class="medium black arrow icon vam"></i>
+                Testimonials
+              </h2>
+              <p class="feature-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque quis nulla id orci malesuada porta posuere quis massa.
+                Nunc vitae purus non augue scelerisque ultricies vitae et velit.
+                Sed vitae lectus id sem lobortis scelerisque.
+              </p>
+              <span class="feature-signature">Rafi, Graphicsfuel.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <div class="columns-inner">
+            <hr class="primary-hr" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="twelve columns">
+            <div class="columns-inner">
+              <h2 class="portfolio-header">
+                <i class="medium black arrow icon vam"></i>
+                Our Portfolio
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="portfolio-image three columns mobile-three">
+            <div class="columns-inner tac">
+              <img src="img/gfx_portfolio-image_1.jpg" width="220" height="138" alt="Gfx Portfolio Image 1" />
+            </div>
+          </div>
+          <div class="portfolio-image three columns mobile-three">
+            <div class="columns-inner tac">
+              <img src="img/gfx_portfolio-image_2.jpg" width="220" height="138" alt="Gfx Portfolio Image 2" />
+            </div>
+          </div>
+          <div class="portfolio-image three columns mobile-three">
+            <div class="columns-inner tac">
+              <img src="img/gfx_portfolio-image_3.jpg" width="220" height="138" alt="Gfx Portfolio Image 3" />
+            </div>
+          </div>
+          <div class="portfolio-image three columns mobile-three">
+            <div class="columns-inner tac">
+              <img src="img/gfx_portfolio-image_4.jpg" width="220" height="138" alt="Gfx Portfolio Image 4" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <div class="columns-inner">
+            <hr class="primary-hr" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="eight columns">
+          <div class="blog columns-inner">
             <h3 class="blog-header">
               <i class="small black arrow icon vam"></i>
               Blog Updates
@@ -158,52 +197,79 @@
               Nunc vitae purus non augue scelerisque ultricies vitae et velit.
               Sed vitae lectus id sem lobortis scelerisque. Praesent eget consequat libero.
             </p>
-            <!-- Module | Blog -->
           </div>
-          <div class="unit size1of4 lastUnit connect">
-            <!-- Module | Connect -->
+        </div>
+        <div class="three columns push-one lastColumn">
+          <div class="connect columns-inner">
             <h3 class="connect-header">
               <i class="small black arrow icon vam"></i>
               Connect With Us
             </h3>
-            <ul>
-              <li class="connect-item"><a href="#"><i class="medium blue twitter icon is-replacement vat"><span class="replacement-text">Twitter</span></i></a></li>
-              <li class="connect-item"><a href="#"><i class="medium blue facebook icon is-replacement vat"><span class="replacement-text">Facebook</span></i></a></li>
-              <li class="connect-item"><a href="#"><i class="medium gray flickr icon is-replacement vat"><span class="replacement-text">Flickr</span></i></a></li>
-              <li class="connect-item"><a href="#"><i class="medium orange rss icon is-replacement vat"><span class="replacement-text">RSS</span></i></a></li>
+            <ul class="connect-menu nav">
+              <li class="connect-item">
+                <a href="#">
+                  <i class="medium blue twitter icon has-image-replacement">
+                    <span class="image-replacement-text">Twitter</span>
+                  </i>
+                </a>
+              </li>
+              <li class="connect-item">
+                <a href="#">
+                  <i class="medium blue facebook icon has-image-replacement">
+                    <span class="image-replacement-text">Facebook</span>
+                  </i>
+                </a>
+              </li>
+              <li class="connect-item">
+                <a href="#">
+                  <i class="medium gray flickr icon has-image-replacement">
+                    <span class="image-replacement-text">Flickr</span>
+                  </i>
+                </a>
+              </li>
+              <li class="connect-item">
+                <a href="#">
+                  <i class="medium orange rss icon has-image-replacement">
+                    <span class="image-replacement-text">RSS</span>
+                  </i>
+                </a>
+              </li>
             </ul>
-            <!-- Module | Connect -->
           </div>
+        </div>
       </div>
+      <div class="push"></div>
     </div>
-    <div class="push"></div> <!-- push used to push footer down to bottom of page -->
   </div>
   <div class="primary-footer">
-    <!-- Footer -->
-    <div class="line l-constrained">
-      <div class="unit size1of2 primary-footer-info">
-        <div class="primary-footer-nav">
-          <a href="#">Home</a>
-          <span class="spacer">|</span>
-          <a href="#">About</a>
-          <span class="spacer">|</span>
-          <a href="#">Portfolio</a>
-          <span class="spacer">|</span>
-          <a href="#">Services</a>
-          <span class="spacer">|</span>
-          <a href="#">Blog</a>
-          <span class="spacer">|</span>
-          <a href="#">Contact Us</a>
+    <div class="row">
+      <div class="primary-footer-info six columns">
+        <div class="columns-inner">
+          <div class="primary-footer-menu nav">
+            <a href="#" class="primary-footer-menu-item">Home</a>
+            <span class="spacer">|</span>
+            <a href="#" class="primary-footer-menu-item">About</a>
+            <span class="spacer">|</span>
+            <a href="#" class="primary-footer-menu-item">Portfolio</a>
+            <span class="spacer">|</span>
+            <a href="#" class="primary-footer-menu-item">Services</a>
+            <span class="spacer">|</span>
+            <a href="#" class="primary-footer-menu-item">Blog</a>
+            <span class="spacer">|</span>
+            <a href="#" class="primary-footer-menu-item">Contact Us</a>
+          </div>
+          <div>&copy; 2010 CreativeStudio All Rights Reserved</div>
         </div>
-        <div>&copy; 2010 CreativeStudio All Rights Reserved</div>
       </div>
-      <div class="unit size1of2 lastUnit tar">
-        <i class="large orange logo icon is-replacement vam">
-          <h2 class="replacement-text">Creative Studio</h2>
-        </i>
+      <div class="six columns lastColumn">
+        <div class="columns-inner tar">
+          <a href="#" class="primary-footer-logo">
+            <i class="large orange logo icon has-image-replacement vam">
+              <h2 class="image-replacement-text">Creative Studio</h2>
+            </i>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- Footer -->
-  </div>
-</body>
+  </body>
 </html>

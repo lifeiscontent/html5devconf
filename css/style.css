@@ -1,5 +1,4 @@
-/*   RESET
------------------------------------------------------------------------------*/
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,22 +55,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/*   Helpers
- *
- *   Used for Common layout/content fixing
- *
- *
------------------------------------------------------------------------------*/
-.cf, .primary-header-nav, .primary-header-nav ul, .hero-caption {
-  zoom: 1;
-  /* For IE 6/7 (trigger hasLayout) */
-}
-.cf::before, .primary-header-nav::before, .primary-header-nav ul::before, .hero-caption::before, .cf::after, .primary-header-nav::after, .primary-header-nav ul::after, .hero-caption::after {
-  content: "";
-  display: table;
-}
-.cf::after, .primary-header-nav::after, .primary-header-nav ul::after, .hero-caption::after {
-  clear: both;
+/*------------------------------------*\
+    $HELPER
+\*------------------------------------*/
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.fl` class to the markup.
+ */
+.cf, .nav {
+  overflow: hidden;
+  *zoom: 1;
 }
 
 .cb {
@@ -79,10 +74,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .fl {
+  display: inline;
   float: left;
 }
 
 .fr {
+  display: inline;
   float: right;
 }
 
@@ -94,276 +91,232 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-align: left;
 }
 
-.tar {
-  text-align: right;
-}
-
-.tac {
+.tac, .text-center {
   text-align: center;
 }
 
-.vat {
-  vertical-align: top;
+.tar, .proceed {
+  text-align: right;
 }
 
-.vam {
-  vertical-align: middle;
+/**
+ * Align items to the right where they imply progression/movement forward, e.g.:
+ *
+   <p class=proceed><a href=#>Read more...</a></p>
+ *
+ */
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+.informative {
+  cursor: help;
 }
 
-.vab {
-  vertical-align: bottom;
+.row, .lastColumn {
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;
 }
 
-/*   Layout - Constrained
- *
- *   Used for keeping the layout constrained at 960px and optionally letting
-		the parent background bleed to the edge of the page.
- *
- *
------------------------------------------------------------------------------*/
-.l-constrained {
-  margin: auto;
-  width: 320px;
-  -webkit-transition: width 0.6s ease-in-out;
-  -moz-transition: width 0.6s ease-in-out;
-  -o-transition: width 0.6s ease-in-out;
-  transition: width 0.6s ease-in-out;
-}
-@media screen and (max-width: 640px) {
-  .l-constrained .size1of3 {
-    width: 100%;
-    display: block;
-  }
-  .l-constrained .size1of4 {
-    width: 100%;
-    display: block;
-  }
-  .l-constrained .size3of4 {
-    width: 100%;
-    display: block;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 960px) {
-  .l-constrained {
-    width: 640px;
-  }
-  .l-constrained .portfolio-image {
-    width: 50%;
-  }
-  .l-constrained .portfolio-image.lastUnit {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-  }
-}
-@media screen and (min-width: 960px) {
-  .l-constrained {
-    width: 960px;
-  }
+.row {
+  margin: 0 auto;
 }
 
-/*   Layout - Grid
- *
- *   Used for spacing everything out into a fluid grid
- *   if you'd like to use a fixed size just put a
-        pixel width on the top most container.
- *
- *   line is used to wrap the entire row of content you are working with
- *   unit is used to specify a unit of the grid, a second parameter is used to
-        specifiy the size of the grid e.g ( .size1of4 )
- *   lastUnit is used on the last item in the row; NOTES: don't use lastUnit on
-        a size1of1 unit I've found problems in firefox doing this
- *
- *
------------------------------------------------------------------------------*/
-.line::after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-.unit {
+.column,
+.columns {
   float: left;
+  position: relative;
 }
 
-.size1of1 {
-  float: none;
+.one {
+  width: 8.33333%;
 }
 
-.size1of2 {
-  width: 50%;
+.two {
+  width: 16.66667%;
 }
 
-.size1of3 {
-  width: 33.33333%;
-}
-
-.size2of3 {
-  width: 66.66666%;
-}
-
-.size1of4 {
+.three {
   width: 25%;
 }
 
-.size3of4 {
+.four {
+  width: 33.33333%;
+}
+
+.five {
+  width: 41.66667%;
+}
+
+.six {
+  width: 50%;
+}
+
+.seven {
+  width: 58.33333%;
+}
+
+.eight {
+  width: 66.66667%;
+}
+
+.nine {
   width: 75%;
 }
 
-.size1of5 {
-  width: 20%;
+.ten {
+  width: 83.33333%;
 }
 
-.size2of5 {
-  width: 40%;
+.eleven {
+  width: 91.66667%;
 }
 
-.size3of5 {
-  width: 60%;
+.twelve {
+  width: 100%;
 }
 
-.size4of5 {
-  width: 80%;
+.column-inner,
+.columns-inner {
+  margin: 0 10px;
+}
+.collapse .column-inner, .collapse
+.columns-inner {
+  margin: 0;
 }
 
-.lastUnit {
-  display: table-cell;
+.lastColumn {
   float: none;
   width: auto;
-}
-.lastUnit::after {
-  content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
-  visibility: hidden;
-  clear: both;
-  height: 0 !important;
-  display: block;
-  line-height: 0;
-}
-
-/* Grid::debug */
-/*   Layout - Wrapper
- *
- *   Used in conjunction with .push to push the footer
- 		down to the bottom of the page.
- *
- *
------------------------------------------------------------------------------*/
-.l-wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-}
-
-/*   Module - Blog
- *
- *   Used for blog post(s)
- *
- *
------------------------------------------------------------------------------*/
-/*   Module - Connect
- *
- *   Used for social networks
- *
- *
------------------------------------------------------------------------------*/
-/*   Module - Feature
- *
- *   Used for a Feature Column
- *
- *
------------------------------------------------------------------------------*/
-/*   Module - Hero
- *
- *   Used for major call-outs on a page
- *
- *
------------------------------------------------------------------------------*/
-/*   Module - Icon
- *
- *   Used for common icons throughout the site
- *
- *
------------------------------------------------------------------------------*/
-/*   Module - Portfolio
- *
- *   Used for a Portfolio Column
- *
- *
------------------------------------------------------------------------------*/
-.line {
-  *zoom: 1;
-}
-
-.lastUnit {
-  *display: block;
-  *zoom: 1;
   _position: relative;
   _left: -3px;
   _margin-right: -3px;
 }
 
-/*   Base
- *
- *   Used for styling the structure of content of the site
- *
- *
------------------------------------------------------------------------------*/
-html {
-  font: normal 12px/12px "Helvetica Neue", "Helvetica", sans-serif;
+.push-one {
+  left: 8.33333%;
 }
 
-html, body {
+.pull-one {
+  right: 8.33333%;
+}
+
+.push-two {
+  left: 16.66667%;
+}
+
+.pull-two {
+  right: 16.66667%;
+}
+
+.push-three {
+  left: 25%;
+}
+
+.pull-three {
+  right: 25%;
+}
+
+.push-four {
+  left: 33.33333%;
+}
+
+.pull-four {
+  right: 33.33333%;
+}
+
+.push-five {
+  left: 41.66667%;
+}
+
+.pull-five {
+  right: 41.66667%;
+}
+
+.push-six {
+  left: 50%;
+}
+
+.pull-six {
+  right: 50%;
+}
+
+.push-seven {
+  left: 58.33333%;
+}
+
+.pull-seven {
+  right: 58.33333%;
+}
+
+.push-eight {
+  left: 66.66667%;
+}
+
+.pull-eight {
+  right: 66.66667%;
+}
+
+.push-nine {
+  left: 75%;
+}
+
+.pull-nine {
+  right: 75%;
+}
+
+.push-ten {
+  left: 83.33333%;
+}
+
+.pull-ten {
+  right: 83.33333%;
+}
+
+.push-eleven {
+  left: 91.66667%;
+}
+
+.pull-eleven {
+  right: 91.66667%;
+}
+
+.l-wrapper {
+  margin: 0 auto;
+}
+
+.hero-caption {
+  font-size: 15px;
+}
+
+.feature-header, .portfolio-header {
+  font-size: 18px;
+}
+
+html, body, input, select, textarea {
+  font: normal 12px/1.5em Arial, sans-serif;
+}
+
+img, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object, embed {
   height: 100%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
 }
 
 a {
   text-decoration: none;
 }
 
-hr {
-  border-width: 1px 0 0 0;
-  border-style: solid;
+.primary-hr {
   margin: 20px 0;
-}
-
-h2 {
-  font-size: 18px;
-}
-
-h3 {
-  font-size: 14px;
-}
-
-@media screen and (max-width: 960px) {
-  .primary-header .primary-header-logo {
-    width: 100%;
-  }
-  .primary-header .primary-header-content {
-    width: 100%;
-  }
-}
-
-.primary-header-nav {
-  padding-top: 40px;
-}
-.primary-header-nav ul {
-  float: right;
-}
-.primary-header-nav li {
-  float: left;
-  margin-left: 40px;
-}
-.primary-header-nav a {
-  line-height: 24px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.primary-header-email {
-  text-align: right;
-  font-size: 13px;
 }
 
 .hero {
@@ -371,90 +324,295 @@ h3 {
 }
 
 .hero-caption {
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 0;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
 }
-.hero-caption span, .hero-caption a {
-  padding: 8px 12px;
-  font-size: 12px;
+
+.primary-header-logo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+.primary-header-email {
+  text-align: right;
+}
+
+.primary-header-menu {
+  margin-right: -27px;
+  text-align: right;
+  margin: 20px 0;
+}
+
+.primary-header-menu-item {
   font-weight: bold;
+  margin: 0 27px;
+}
+
+.feature-header {
+  line-height: 2em;
+  border-bottom: 6px solid;
   text-transform: uppercase;
+  font-weight: bold;
 }
-.hero-caption span {
-  float: left;
-}
-.hero-caption a {
-  float: right;
-}
-@media screen and (min-width: 960px) {
-  .hero-caption {
-    bottom: 5%;
-    left: 5%;
-    width: 43.75%;
-  }
-  .hero-caption span, .hero-caption a {
-    font-size: 14px;
-  }
+.feature-header .icon {
+  margin-top: -0.25em;
+  margin-right: 0.5em;
 }
 
-.connect-item a {
-  display: block;
+.feature-read-link {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.feature-read-link .icon {
+  margin-top: -0.25em;
+  margin-left: 0.5em;
 }
 
-.l-wrapper {
-  margin: 0 auto -80px;
-  /* the bottom margin is the negative value of the footer's height */
+.feature-signature {
+  font-style: italic;
 }
 
-.push, .primary-footer {
-  height: 80px;
+.portfolio-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 3em;
+}
+.portfolio-header .icon {
+  margin-top: -0.25em;
+  margin-right: 0.5em;
+}
+
+.blog-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 5em;
+}
+.blog-header .icon {
+  margin-top: -0.25em;
+  margin-right: 0.5em;
+}
+
+.connect-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 5em;
+}
+.connect-header .icon {
+  margin-top: -0.25em;
+  margin-right: 0.5em;
+}
+
+.connect-menu {
+  margin: 0 -6px;
+}
+
+.connect-item {
+  margin: 0 6px;
 }
 
 .primary-footer {
-  font-size: 12px;
-  padding: 8px 0;
-  line-height: 18px;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.primary-footer-nav {
-  margin-bottom: 10px;
-}
-.primary-footer-nav a {
-  line-height: 18px;
-}
-
-/* unsure what to do with these */
-.icon.medium.black.arrow {
-  margin-bottom: 5px;
-  margin-right: 5px;
+.primary-footer-logo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 
-.icon.small.black.arrow {
-  margin-bottom: 2px;
-  margin-right: 2px;
-}
+@media (min-width: 960px) {
+  .row {
+    width: 960px;
+  }
 
-/*   Theme
- *
- *   Used for styling the theme of the site.
- *
- *
------------------------------------------------------------------------------*/
+  .hero-caption {
+    width: 50%;
+    bottom: 44px;
+    left: 25px;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  .l-wrapper {
+    clear: both;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -100px;
+  }
+  .l-wrapper .push {
+    height: 100px;
+  }
+
+  .primary-footer {
+    clear: both;
+    position: relative;
+    height: 100px;
+  }
+
+  .primary-footer {
+    height: 80px;
+  }
+}
+@media (max-width: 960px) {
+  .row .column,
+  .row .columns {
+    width: 100%;
+  }
+
+  .push-one {
+    left: 0;
+  }
+
+  .pull-one {
+    right: 0;
+  }
+
+  .push-two {
+    left: 0;
+  }
+
+  .pull-two {
+    right: 0;
+  }
+
+  .push-three {
+    left: 0;
+  }
+
+  .pull-three {
+    right: 0;
+  }
+
+  .push-four {
+    left: 0;
+  }
+
+  .pull-four {
+    right: 0;
+  }
+
+  .push-five {
+    left: 0;
+  }
+
+  .pull-five {
+    right: 0;
+  }
+
+  .push-six {
+    left: 0;
+  }
+
+  .pull-six {
+    right: 0;
+  }
+
+  .push-seven {
+    left: 0;
+  }
+
+  .pull-seven {
+    right: 0;
+  }
+
+  .push-eight {
+    left: 0;
+  }
+
+  .pull-eight {
+    right: 0;
+  }
+
+  .push-nine {
+    left: 0;
+  }
+
+  .pull-nine {
+    right: 0;
+  }
+
+  .push-ten {
+    left: 0;
+  }
+
+  .pull-ten {
+    right: 0;
+  }
+
+  .push-eleven {
+    left: 0;
+  }
+
+  .pull-eleven {
+    right: 0;
+  }
+
+  .mobile-one {
+    width: 16.66667% !important;
+  }
+
+  .mobile-two {
+    width: 33.33333% !important;
+  }
+
+  .mobile-three {
+    width: 50% !important;
+  }
+
+  .mobile-four {
+    width: 66.66667% !important;
+  }
+
+  .mobile-five {
+    width: 83.33333% !important;
+  }
+
+  .mobile-six {
+    width: 100% !important;
+  }
+
+  .primary-footer-menu-item {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .spacer {
+    display: none;
+  }
+}
 html {
   background-color: #f4f4f4;
 }
 
-hr {
-  border-color: #c0c0c0;
+.l-wrapper a {
+  color: #fe9b00;
 }
 
-.feature-header {
-  border-color: #090909;
+.primary-header-menu-item {
+  text-transform: uppercase;
 }
 
-.feature-item, .feature-paragraph {
+.feature-paragraph {
+  color: #5d5d5d;
+}
+
+.feature-item {
   color: #5d5d5d;
 }
 
@@ -462,33 +620,21 @@ hr {
   color: #fe9b00;
 }
 
-.primary-header-nav a {
-  color: #fe9b00;
-}
-.primary-header-nav a:hover {
-  color: #090909;
-}
-
-.primary-header-email {
-  color: #999898;
-}
-
 .primary-footer {
   background-color: #e2e2e2;
+  color: #5d5d5d;
 }
-.primary-footer, .primary-footer .primary-footer-nav a {
+
+.primary-footer-menu-item {
   color: #5d5d5d;
 }
 
 .hero-caption {
-  background-color: #090909;
+  background-color: #000000;
   color: #999898;
-  -webkit-transition: width 0.6s ease-in-out;
-  -moz-transition: width 0.6s ease-in-out;
-  -o-transition: width 0.6s ease-in-out;
-  transition: width 0.6s ease-in-out;
 }
-.hero-caption a {
+
+.hero-caption-link {
   color: #fe9b00;
 }
 
@@ -498,63 +644,18 @@ hr {
  *
  *
 -----------------------------------------------------------------------------*/
-.blog {
-  padding-bottom: 18px;
-}
-
-.blog-header {
-  padding-bottom: 14px;
-  font-weight: bold;
-}
-
-.connect {
-  padding-bottom: 18px;
-}
-
-.connect-header {
-  padding-bottom: 14px;
-  font-weight: bold;
-}
-
-.connect-item {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-
-.feature {
-  width: 90%;
-  margin: 16px auto;
-}
-
-.feature-header {
-  font-size: 18px;
-  font-weight: bold;
-  border-bottom: 6px solid;
-}
-
-.feature-item {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.feature-paragraph {
-  line-height: 20px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.feature-read-link {
-  font-weight: bold;
-}
-
-.hero img {
-  max-width: 100%;
-  *width: 100%;
-}
-
+/*------------------------------------*\
+    $ICON
+\*------------------------------------*/
+/**
+ * Icon module for icons and sprites.
+ * e.g.:
+ *
+   <i class="small black arrow icon"></i>
+ *
+ */
 .icon {
-  background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
+  background: transparent url('../img/sprite/icon-see571118c8.png') no-repeat;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -563,7 +664,7 @@ hr {
   *display: inline;
   *behavior: url("iepngfix.htc");
 }
-.icon.is-replacement {
+.icon.has-image-replacement {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -609,13 +710,64 @@ hr {
   height: 5px;
 }
 
-.portfolio-image {
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.nav {
+  list-style: none;
+  margin-left: 0;
+}
+
+.nav > li,
+.nav > li > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/**
+ * `.stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+   <ul class="nav stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.stacked > li {
+  display: list-item;
+}
+
+.stacked > li > a {
+  display: block;
+}
+
+/**
+ * `.banner-nav` extends `.nav` and centres the list, e.g.:
+ *
+   <ul class="nav banner-nav">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+.banner-nav {
   text-align: center;
 }
-
-.portfolio-header {
-  font-weight: bold;
-  padding-bottom: 18px;
-}
-
-/* box model debug */

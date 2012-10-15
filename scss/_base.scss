@@ -1,131 +1,103 @@
-/*   Base
- *
- *   Used for styling the structure of content of the site
- *
- *
------------------------------------------------------------------------------*/
-
-
-html {
-	font: normal 12px/12px 'Helvetica Neue', 'Helvetica', sans-serif;
+%small-font-size {
+  font-size: 13px;
+}
+%medium-font-size {
+  font-size: 14px;
+}
+%large-font-size {
+  font-size: 15px;
+}
+%huge-font-size {
+  font-size: 18px;
 }
 
-html, body {
-	height: 100%;
-}
+html,body, input, select, textarea { font: normal 12px/1.5em Arial, sans-serif; }
+img, object, embed { max-width: 100%; height: auto; }
+object, embed { height: 100%; }
+img { -ms-interpolation-mode: bicubic; }
+a { text-decoration: none; }
 
-a {
-	text-decoration: none;
+.primary-hr {
+  margin: 20px 0;
 }
-
-hr {
-	border-width: 1px 0 0 0;
-	border-style: solid;
-	margin: 20px 0;
-}
-
-h2 {
-	font-size: 18px;
-}
-h3 {
-	font-size: 14px;
-}
-
-.primary-header {
-	@media screen and (max-width:960px) {
-		.primary-header-logo {
-			width: 100%;
-		}
-		.primary-header-content {
-			width: 100%;
-		}
-	}
-}
-
-.primary-header-nav {
-	@extend .cf;
-	padding-top: 40px;
-	ul {
-		float: right;
-		@extend .cf;
-	}
-	li {
-		float: left;
-		margin-left: 40px;
-	}
-	a {
-		line-height: 24px;
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-}
-
-.primary-header-email {
-	text-align: right;
-	font-size: 13px;
-}
-
 .hero {
-	position: relative;
+  position: relative;
 }
 .hero-caption {
-	@extend .cf;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	span, a {
-		padding: 8px 12px;
-		font-size: 12px;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-	span {
-		float: left;
-	}
-	a {
-		float: right;
-	}
-	@media screen and (min-width: 960px) {
-		bottom: 5%;
-		left: 5%;
-		width: 43.75%;
-		span, a {
-			font-size: 14px;
-		}
-	}
+  @extend %large-font-size;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.connect-item a {
-	display: block;
+.primary-header-logo {
+  @include inline-block;
+}
+.primary-header-email {
+  text-align: right;
+}
+.primary-header-menu {
+  margin-right: -27px;
+  text-align: right;
+  margin: 20px 0;
+}
+.primary-header-menu-item {
+  font-weight: bold;
+  margin: 0 27px;
 }
 
-.l-wrapper {
-	margin: 0 auto -80px; /* the bottom margin is the negative value of the footer's height */
+.feature-header {
+  @extend %huge-font-size;
+  line-height: 2em;
+  border-bottom: 6px solid;
+  text-transform: uppercase;
+  font-weight: bold;
+  .icon { margin-top: -0.25em; margin-right: 0.5em; }
 }
-.push, .primary-footer {
-	height: 80px;
+.feature-read-link {
+  text-transform: uppercase;
+  font-weight: bold;
+  .icon { margin-top: -0.25em; margin-left: 0.5em; }
 }
+.feature-signature {
+  font-style: italic;
+}
+.portfolio-header {
+  @extend %huge-font-size;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 3em;
+  .icon { margin-top: -0.25em; margin-right: 0.5em; }
+}
+
+.blog-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 5em;
+  .icon { margin-top: -0.25em; margin-right: 0.5em; }
+}
+
+.connect-header {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 5em;
+  .icon { margin-top: -0.25em; margin-right: 0.5em; }
+}
+.connect-menu {
+  margin: 0 -6px;
+}
+.connect-item {
+  margin: 0 6px;
+}
+
 .primary-footer {
-	font-size: 12px;
-	padding: 8px 0;
-	line-height: 18px;
+  margin-top: 20px;
+  padding-top: 20px;
 }
-
-.primary-footer-nav {
-	margin-bottom: 10px;
-	a {
-		line-height: 18px;
-	}
-}
-
-/* unsure what to do with these */
-.icon.medium.black.arrow {
-	margin-bottom: 5px;
-	margin-right: 5px;
-}
-
-.icon.small.black.arrow {
-	margin-bottom: 2px;
-	margin-right: 2px;
+.primary-footer-logo {
+  @include inline-block;
 }

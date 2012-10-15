@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
  * that ruleset as opposed to adding the `.fl` class to the markup.
  */
-.cf, .nav {
+.cf {
   overflow: hidden;
   *zoom: 1;
 }
@@ -282,8 +282,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   right: 91.66667%;
 }
 
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
+/**
+ * `.stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+  <ul class="nav stacked">
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+  </ul>
+ *
+ */
+/**
+ * `.banner-nav` extends `.nav` and centres the list, e.g.:
+ *
+   <ul class="nav banner-nav">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ *
+ */
 .l-wrapper {
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .hero-caption {
@@ -347,14 +386,30 @@ a {
 }
 
 .primary-header-menu {
-  margin-right: -27px;
   text-align: right;
   margin: 20px 0;
+  margin-right: -27px;
+  list-style: none;
+  margin-left: 0;
+  overflow: hidden;
+  *zoom: 1;
 }
 
 .primary-header-menu-item {
   font-weight: bold;
   margin: 0 27px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  display: list-item;
+}
+
+.primary-header-menu-link {
+  display: block;
+  padding: 10px 0;
 }
 
 .feature-header {
@@ -412,10 +467,20 @@ a {
 }
 
 .connect-menu {
+  list-style: none;
+  margin-left: 0;
+  overflow: hidden;
+  *zoom: 1;
   margin: 0 -6px;
 }
 
 .connect-item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   margin: 0 6px;
 }
 
@@ -444,29 +509,33 @@ a {
     left: 25px;
   }
 
-  html, body {
-    height: 100%;
-  }
-
-  .l-wrapper {
-    clear: both;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin-bottom: -100px;
-  }
-  .l-wrapper .push {
-    height: 100px;
-  }
-
-  .primary-footer {
-    clear: both;
-    position: relative;
-    height: 100px;
-  }
-
   .primary-footer {
     height: 80px;
+  }
+
+  .primary-header-menu {
+    list-style: none;
+    margin-left: 0;
+    overflow: hidden;
+    *zoom: 1;
+  }
+
+  .primary-header-menu-item {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+  }
+
+  .primary-header-menu-link {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
   }
 }
 @media (max-width: 960px) {
@@ -655,7 +724,7 @@ html {
  *
  */
 .icon {
-  background: transparent url('../img/sprite/icon-see571118c8.png') no-repeat;
+  background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -708,66 +777,4 @@ html {
   background-position: 0 -299px;
   width: 9px;
   height: 5px;
-}
-
-/*------------------------------------*\
-    $NAV
-\*------------------------------------*/
-/**
- * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
- * When used on an `ol` or `ul`, this class throws the list into horizontal mode
- * e.g.:
- *
-   <ul class=nav>
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.nav {
-  list-style: none;
-  margin-left: 0;
-}
-
-.nav > li,
-.nav > li > a {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-
-/**
- * `.stacked` extends `.nav` and throws the list into vertical mode, e.g.:
- *
-   <ul class="nav stacked">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.stacked > li {
-  display: list-item;
-}
-
-.stacked > li > a {
-  display: block;
-}
-
-/**
- * `.banner-nav` extends `.nav` and centres the list, e.g.:
- *
-   <ul class="nav banner-nav">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-.banner-nav {
-  text-align: center;
 }

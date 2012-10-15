@@ -10,7 +10,6 @@
 %huge-font-size {
   font-size: 18px;
 }
-
 html,body, input, select, textarea { font: normal 12px/1.5em Arial, sans-serif; }
 img, object, embed { max-width: 100%; height: auto; }
 object, embed { height: 100%; }
@@ -41,13 +40,19 @@ a { text-decoration: none; }
   text-align: right;
 }
 .primary-header-menu {
-  margin-right: -27px;
   text-align: right;
   margin: 20px 0;
+  margin-right: -27px;
+  @include base-stacked-nav;
 }
 .primary-header-menu-item {
   font-weight: bold;
   margin: 0 27px;
+  @include base-stacked-nav-item;
+}
+.primary-header-menu-link {
+  @include base-stacked-nav-link;
+  padding: 10px 0;
 }
 
 .feature-header {
@@ -88,9 +93,11 @@ a { text-decoration: none; }
   .icon { margin-top: -0.25em; margin-right: 0.5em; }
 }
 .connect-menu {
+  @include base-nav;
   margin: 0 -6px;
 }
 .connect-item {
+  @include base-nav-item;
   margin: 0 6px;
 }
 

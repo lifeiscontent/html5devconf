@@ -14,17 +14,10 @@
    </ul>
  *
  */
-  @mixin base-nav {
-    list-style:none;
-    margin-left:0;
-    @include clearfix;
-  }
-  @mixin base-nav-item {
-    @include inline-block;
-  }
-  @mixin base-nav-link {
-    @include base-nav-item;
-  }
+  @mixin base-nav { list-style:none; margin-left:0; @include clearfix; }
+  @mixin base-nav-item { @include inline-block; }
+  @mixin base-nav-link { @include base-nav-item; }
+
   %base-nav { @include base-nav; }
   %base-nav-item { @include base-nav-item; }
   %base-nav-link { @include base-nav-link; }
@@ -41,25 +34,13 @@
   </ul>
  *
  */
-    @mixin base-stacked-nav {
-      @include base-nav;
-    }
-    @mixin base-stacked-nav-item {
-      @include base-nav-item;
-      display: list-item;
-    }
-    @mixin base-stacked-nav-link {
-      display:block;
-    }
-    %base-stacked-nav {
-      @include base-stacked-nav;
-    }
-    %base-stacked-nav-item {
-      @include base-stacked-nav-item;
-    }
-    %base-stacked-nav-link {
-      @include base-stacked-nav-link;
-    }
+    @mixin base-stacked-nav { @include base-nav; }
+    @mixin base-stacked-nav-item { @include base-nav-item; display: list-item; }
+    @mixin base-stacked-nav-link { display:block; }
+
+    %base-stacked-nav { @include base-stacked-nav; }
+    %base-stacked-nav-item { @include base-stacked-nav-item; }
+    %base-stacked-nav-link { @include base-stacked-nav-link; }
 
 /**
  * `.banner-nav` extends `.nav` and centres the list, e.g.:
@@ -72,10 +53,10 @@
    </ul>
  *
  */
-    @mixin base-banner-nav {
-      @include base-nav;
-      text-align: center;
-    }
-    %base-banner-nav {
-      @include base-banner-nav;
-    }
+    @mixin base-banner-nav { @include base-nav; text-align: center; }
+    @mixin base-banner-nav-item { @include base-nav-item; }
+    @mixin base-banner-nav-link { @include base-nav-link; }
+
+    %base-banner-nav { @include base-banner-nav; }
+    %base-banner-nav-item { @include base-banner-nav-item; }
+    %base-banner-nav-link { @include base-banner-nav-link; }

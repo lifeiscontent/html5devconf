@@ -129,54 +129,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   position: relative;
 }
 
-.one {
-  width: 8.33333%;
-}
-
-.two {
-  width: 16.66667%;
-}
-
-.three {
-  width: 25%;
-}
-
-.four {
-  width: 33.33333%;
-}
-
-.five {
-  width: 41.66667%;
-}
-
-.six {
-  width: 50%;
-}
-
-.seven {
-  width: 58.33333%;
-}
-
-.eight {
-  width: 66.66667%;
-}
-
-.nine {
-  width: 75%;
-}
-
-.ten {
-  width: 83.33333%;
-}
-
-.eleven {
-  width: 91.66667%;
-}
-
-.twelve {
-  width: 100%;
-}
-
 .column-inner,
 .columns-inner {
   margin: 0 10px;
@@ -194,94 +146,212 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   _margin-right: -3px;
 }
 
-.push-one {
-  left: 8.33333%;
-}
+@media (min-width: 960px) {
+  .row {
+    width: 960px;
+  }
 
-.pull-one {
-  right: 8.33333%;
-}
+  .one {
+    width: 8.33333%;
+  }
 
-.push-two {
-  left: 16.66667%;
-}
+  .two {
+    width: 16.66667%;
+  }
 
-.pull-two {
-  right: 16.66667%;
-}
+  .three {
+    width: 25%;
+  }
 
-.push-three {
-  left: 25%;
-}
+  .four {
+    width: 33.33333%;
+  }
 
-.pull-three {
-  right: 25%;
-}
+  .five {
+    width: 41.66667%;
+  }
 
-.push-four {
-  left: 33.33333%;
-}
+  .six {
+    width: 50%;
+  }
 
-.pull-four {
-  right: 33.33333%;
-}
+  .seven {
+    width: 58.33333%;
+  }
 
-.push-five {
-  left: 41.66667%;
-}
+  .eight {
+    width: 66.66667%;
+  }
 
-.pull-five {
-  right: 41.66667%;
-}
+  .nine {
+    width: 75%;
+  }
 
-.push-six {
-  left: 50%;
-}
+  .ten {
+    width: 83.33333%;
+  }
 
-.pull-six {
-  right: 50%;
-}
+  .eleven {
+    width: 91.66667%;
+  }
 
-.push-seven {
-  left: 58.33333%;
-}
+  .twelve {
+    width: 100%;
+  }
 
-.pull-seven {
-  right: 58.33333%;
-}
+  .push-one {
+    left: 8.33333%;
+  }
 
-.push-eight {
-  left: 66.66667%;
-}
+  .pull-one {
+    right: 8.33333%;
+  }
 
-.pull-eight {
-  right: 66.66667%;
-}
+  .push-two {
+    left: 16.66667%;
+  }
 
-.push-nine {
-  left: 75%;
-}
+  .pull-two {
+    right: 16.66667%;
+  }
 
-.pull-nine {
-  right: 75%;
-}
+  .push-three {
+    left: 25%;
+  }
 
-.push-ten {
-  left: 83.33333%;
-}
+  .pull-three {
+    right: 25%;
+  }
 
-.pull-ten {
-  right: 83.33333%;
-}
+  .push-four {
+    left: 33.33333%;
+  }
 
-.push-eleven {
-  left: 91.66667%;
-}
+  .pull-four {
+    right: 33.33333%;
+  }
 
-.pull-eleven {
-  right: 91.66667%;
-}
+  .push-five {
+    left: 41.66667%;
+  }
 
+  .pull-five {
+    right: 41.66667%;
+  }
+
+  .push-six {
+    left: 50%;
+  }
+
+  .pull-six {
+    right: 50%;
+  }
+
+  .push-seven {
+    left: 58.33333%;
+  }
+
+  .pull-seven {
+    right: 58.33333%;
+  }
+
+  .push-eight {
+    left: 66.66667%;
+  }
+
+  .pull-eight {
+    right: 66.66667%;
+  }
+
+  .push-nine {
+    left: 75%;
+  }
+
+  .pull-nine {
+    right: 75%;
+  }
+
+  .push-ten {
+    left: 83.33333%;
+  }
+
+  .pull-ten {
+    right: 83.33333%;
+  }
+
+  .push-eleven {
+    left: 91.66667%;
+  }
+
+  .pull-eleven {
+    right: 91.66667%;
+  }
+}
+@media (max-width: 960px) {
+  .mobile-one {
+    width: 16.66667% !important;
+  }
+
+  .mobile-two {
+    width: 33.33333% !important;
+  }
+
+  .mobile-three {
+    width: 50% !important;
+  }
+
+  .mobile-four {
+    width: 66.66667% !important;
+  }
+
+  .mobile-five {
+    width: 83.33333% !important;
+  }
+
+  .mobile-six {
+    width: 100% !important;
+  }
+
+  .mobile-push-one {
+    left: 16.66667%;
+  }
+
+  .mobule-pull-one {
+    right: 16.66667%;
+  }
+
+  .mobile-push-two {
+    left: 33.33333%;
+  }
+
+  .mobule-pull-two {
+    right: 33.33333%;
+  }
+
+  .mobile-push-three {
+    left: 50%;
+  }
+
+  .mobule-pull-three {
+    right: 50%;
+  }
+
+  .mobile-push-four {
+    left: 66.66667%;
+  }
+
+  .mobule-pull-four {
+    right: 66.66667%;
+  }
+
+  .mobile-push-five {
+    left: 83.33333%;
+  }
+
+  .mobule-pull-five {
+    right: 83.33333%;
+  }
+}
 /*------------------------------------*\
     $NAV
 \*------------------------------------*/
@@ -309,6 +379,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   </ul>
  *
  */
+.primary-header-menu {
+  list-style: none;
+  margin-left: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.primary-header-menu-item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  display: list-item;
+}
+
+.primary-header-menu-link {
+  display: block;
+}
+
 /**
  * `.banner-nav` extends `.nav` and centres the list, e.g.:
  *
@@ -323,6 +414,103 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .l-wrapper {
   margin: 0 auto;
   overflow: hidden;
+}
+
+/*------------------------------------*\
+    $ICON
+\*------------------------------------*/
+/**
+ * Icon module for icons and sprites.
+ * e.g.:
+ *
+   <i class="small black arrow icon"></i>
+ *
+ */
+.icon {
+  background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+.icon.has-image-replacement {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+.icon.huge.orange.logo {
+  background-position: 0 0;
+  width: 183px;
+  height: 100px;
+}
+.icon.large.orange.logo {
+  background-position: 0 -100px;
+  width: 119px;
+  height: 64px;
+}
+.icon.medium.black.arrow {
+  background-position: 0 -292px;
+  width: 11px;
+  height: 7px;
+}
+.icon.medium.blue.twitter {
+  background-position: 0 -196px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.blue.facebook {
+  background-position: 0 -228px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.gray.flickr {
+  background-position: 0 -260px;
+  width: 32px;
+  height: 32px;
+}
+.icon.medium.orange.rss {
+  background-position: 0 -164px;
+  width: 32px;
+  height: 32px;
+}
+.icon.small.black.arrow {
+  background-position: 0 -299px;
+  width: 9px;
+  height: 5px;
+}
+
+/*------------------------------------*\
+    $Hero
+\*------------------------------------*/
+  /**
+   * Hero module for huge images on landing pages.
+   * e.g.:
+   *
+
+    <div class="hero">
+      <img src="img/gallery/1.jpg" alt="Hero Image">
+      <div class="hero-caption">
+        <span>Here's some nice work</span>
+        <a href="#" class="hero-caption-link">View Portfolio</a>
+      </div>
+    </div>
+
+   *
+   */
+.hero {
+  position: relative;
+}
+.hero img {
+  vertical-align: bottom;
+  /* fix for random padding on images */
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .hero-caption {
@@ -340,6 +528,7 @@ html, body, input, select, textarea {
 img, object, embed {
   max-width: 100%;
   height: auto;
+  *width: 100%;
 }
 
 object, embed {
@@ -389,26 +578,14 @@ a {
   text-align: right;
   margin: 20px 0;
   margin-right: -27px;
-  list-style: none;
-  margin-left: 0;
-  overflow: hidden;
-  *zoom: 1;
 }
 
 .primary-header-menu-item {
   font-weight: bold;
   margin: 0 27px;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  display: list-item;
 }
 
 .primary-header-menu-link {
-  display: block;
   padding: 10px 0;
 }
 
@@ -499,18 +676,26 @@ a {
 }
 
 @media (min-width: 960px) {
-  .row {
-    width: 960px;
-  }
-
   .hero-caption {
     width: 50%;
     bottom: 44px;
     left: 25px;
   }
 
+  .l-wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px;
+    /* the bottom margin is the negative value of the footer's height */
+  }
+
+  .push {
+    height: 100px;
+  }
+
   .primary-footer {
-    height: 80px;
+    height: 100px;
   }
 
   .primary-header-menu {
@@ -544,118 +729,6 @@ a {
     width: 100%;
   }
 
-  .push-one {
-    left: 0;
-  }
-
-  .pull-one {
-    right: 0;
-  }
-
-  .push-two {
-    left: 0;
-  }
-
-  .pull-two {
-    right: 0;
-  }
-
-  .push-three {
-    left: 0;
-  }
-
-  .pull-three {
-    right: 0;
-  }
-
-  .push-four {
-    left: 0;
-  }
-
-  .pull-four {
-    right: 0;
-  }
-
-  .push-five {
-    left: 0;
-  }
-
-  .pull-five {
-    right: 0;
-  }
-
-  .push-six {
-    left: 0;
-  }
-
-  .pull-six {
-    right: 0;
-  }
-
-  .push-seven {
-    left: 0;
-  }
-
-  .pull-seven {
-    right: 0;
-  }
-
-  .push-eight {
-    left: 0;
-  }
-
-  .pull-eight {
-    right: 0;
-  }
-
-  .push-nine {
-    left: 0;
-  }
-
-  .pull-nine {
-    right: 0;
-  }
-
-  .push-ten {
-    left: 0;
-  }
-
-  .pull-ten {
-    right: 0;
-  }
-
-  .push-eleven {
-    left: 0;
-  }
-
-  .pull-eleven {
-    right: 0;
-  }
-
-  .mobile-one {
-    width: 16.66667% !important;
-  }
-
-  .mobile-two {
-    width: 33.33333% !important;
-  }
-
-  .mobile-three {
-    width: 50% !important;
-  }
-
-  .mobile-four {
-    width: 66.66667% !important;
-  }
-
-  .mobile-five {
-    width: 83.33333% !important;
-  }
-
-  .mobile-six {
-    width: 100% !important;
-  }
-
   .primary-footer-menu-item {
     display: block;
     padding: 10px 0;
@@ -665,6 +738,15 @@ a {
     display: none;
   }
 }
+.icon {
+  *behavior: url("iepngfix.htc");
+}
+
+.portfolio-image img {
+  *height: 138px;
+  /* ie6 needs this */
+}
+
 html {
   background-color: #f4f4f4;
 }
@@ -713,68 +795,3 @@ html {
  *
  *
 -----------------------------------------------------------------------------*/
-/*------------------------------------*\
-    $ICON
-\*------------------------------------*/
-/**
- * Icon module for icons and sprites.
- * e.g.:
- *
-   <i class="small black arrow icon"></i>
- *
- */
-.icon {
-  background: transparent url('../img/../img/sprite/icon-see571118c8.png') no-repeat;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  *behavior: url("iepngfix.htc");
-}
-.icon.has-image-replacement {
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
-}
-.icon.huge.orange.logo {
-  background-position: 0 0;
-  width: 183px;
-  height: 100px;
-}
-.icon.large.orange.logo {
-  background-position: 0 -100px;
-  width: 119px;
-  height: 64px;
-}
-.icon.medium.black.arrow {
-  background-position: 0 -292px;
-  width: 11px;
-  height: 7px;
-}
-.icon.medium.blue.twitter {
-  background-position: 0 -196px;
-  width: 32px;
-  height: 32px;
-}
-.icon.medium.blue.facebook {
-  background-position: 0 -228px;
-  width: 32px;
-  height: 32px;
-}
-.icon.medium.gray.flickr {
-  background-position: 0 -260px;
-  width: 32px;
-  height: 32px;
-}
-.icon.medium.orange.rss {
-  background-position: 0 -164px;
-  width: 32px;
-  height: 32px;
-}
-.icon.small.black.arrow {
-  background-position: 0 -299px;
-  width: 9px;
-  height: 5px;
-}

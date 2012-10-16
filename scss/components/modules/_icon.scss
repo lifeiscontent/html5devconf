@@ -1,85 +1,85 @@
 @mixin icon {
-    /*------------------------------------*\
-        $ICON
-    \*------------------------------------*/
-    /**
-     * Icon module for icons and sprites.
-     * e.g.:
-     *
-       <i class="small black arrow icon"></i>
-     *
-     */
-    .icon {
-        $icons-sprite: sprite-map("../img/sprite/icon/*.png");
-        background: transparent $icons-sprite no-repeat;
-        @include inline-block();
-        *behavior: url("iepngfix.htc");
-        &.has-image-replacement {
-            font: 0/0 a;
-            text-shadow: none;
-            color: transparent;
-        }
-        &.huge {
-            &.orange {
-                &.logo {
-                    background-position: sprite-position($icons-sprite, huge_orange_logo);
-                    width: image-width(sprite-file($icons-sprite, huge_orange_logo));
-                    height: image-height(sprite-file($icons-sprite, huge_orange_logo));
-                }
-            }
-        }
-        &.large {
-            &.orange {
-                &.logo {
-                    background-position: sprite-position($icons-sprite, large_orange_logo);
-                    width: image-width(sprite-file($icons-sprite, large_orange_logo));
-                    height: image-height(sprite-file($icons-sprite, large_orange_logo));
-                }
-            }
-        }
-        &.medium {
-            &.black {
-                &.arrow {
-                    background-position: sprite-position($icons-sprite, medium_black_arrow);
-                    width: image-width(sprite-file($icons-sprite, medium_black_arrow));
-                    height: image-height(sprite-file($icons-sprite, medium_black_arrow));
-                }
-            }
-            &.blue {
-                &.twitter {
-                    background-position: sprite-position($icons-sprite, medium_blue_twitter);
-                    width: image-width(sprite-file($icons-sprite, medium_blue_twitter));
-                    height: image-height(sprite-file($icons-sprite, medium_blue_twitter));
-                }
-                &.facebook {
-                    background-position: sprite-position($icons-sprite, medium_blue_facebook);
-                    width: image-width(sprite-file($icons-sprite, medium_blue_facebook));
-                    height: image-height(sprite-file($icons-sprite, medium_blue_facebook));
-                }
-            }
-            &.gray {
-                &.flickr {
-                    background-position: sprite-position($icons-sprite, medium_gray_flickr);
-                    width: image-width(sprite-file($icons-sprite, medium_gray_flickr));
-                    height: image-height(sprite-file($icons-sprite, medium_gray_flickr));
-                }
-            }
-            &.orange {
-                &.rss {
-                    background-position: sprite-position($icons-sprite, medium_orange_rss);
-                    width: image-width(sprite-file($icons-sprite, medium_orange_rss));
-                    height: image-height(sprite-file($icons-sprite, medium_orange_rss));
-                }
-            }
-        }
-        &.small {
-            &.black {
-                &.arrow {
-                    background-position: sprite-position($icons-sprite, small_black_arrow);
-                    width: image-width(sprite-file($icons-sprite, small_black_arrow));
-                    height: image-height(sprite-file($icons-sprite, small_black_arrow));
-                }
-            }
-        }
+/*------------------------------------*\
+$ICON
+\*------------------------------------*/
+/**
+* Icon module for icons and sprites.
+* e.g.:
+*
+<i class="small black arrow icon"></i>
+*
+*/
+  .icon {
+    *behavior: url("iepngfix.htc"); // tranparency fix for PNGs in IE6.
+    $icons-sprite: sprite-map("../img/sprite/icon/*.png");
+    background: transparent $icons-sprite no-repeat;
+    @include inline-block;
+    &.has-image-replacement {
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
     }
+    &.huge {
+      &.orange {
+        &.logo {
+          background-position: sprite-position($icons-sprite, huge_orange_logo);
+          width: image-width(sprite-file($icons-sprite, huge_orange_logo));
+          height: image-height(sprite-file($icons-sprite, huge_orange_logo));
+        }
+      }
+    }
+    &.large {
+      &.orange {
+        &.logo {
+          background-position: sprite-position($icons-sprite, large_orange_logo);
+          width: image-width(sprite-file($icons-sprite, large_orange_logo));
+          height: image-height(sprite-file($icons-sprite, large_orange_logo));
+        }
+      }
+    }
+    &.medium {
+      &.black {
+        &.arrow {
+          background-position: sprite-position($icons-sprite, medium_black_arrow);
+          width: image-width(sprite-file($icons-sprite, medium_black_arrow));
+          height: image-height(sprite-file($icons-sprite, medium_black_arrow));
+        }
+      }
+      &.blue {
+        &.twitter {
+          background-position: sprite-position($icons-sprite, medium_blue_twitter);
+          width: image-width(sprite-file($icons-sprite, medium_blue_twitter));
+          height: image-height(sprite-file($icons-sprite, medium_blue_twitter));
+        }
+        &.facebook {
+          background-position: sprite-position($icons-sprite, medium_blue_facebook);
+          width: image-width(sprite-file($icons-sprite, medium_blue_facebook));
+          height: image-height(sprite-file($icons-sprite, medium_blue_facebook));
+        }
+      }
+      &.gray {
+        &.flickr {
+          background-position: sprite-position($icons-sprite, medium_gray_flickr);
+          width: image-width(sprite-file($icons-sprite, medium_gray_flickr));
+          height: image-height(sprite-file($icons-sprite, medium_gray_flickr));
+        }
+      }
+      &.orange {
+        &.rss {
+          background-position: sprite-position($icons-sprite, medium_orange_rss);
+          width: image-width(sprite-file($icons-sprite, medium_orange_rss));
+          height: image-height(sprite-file($icons-sprite, medium_orange_rss));
+        }
+      }
+    }
+    &.small {
+      &.black {
+        &.arrow {
+          background-position: sprite-position($icons-sprite, small_black_arrow);
+          width: image-width(sprite-file($icons-sprite, small_black_arrow));
+          height: image-height(sprite-file($icons-sprite, small_black_arrow));
+        }
+      }
+    }
+  }
 }

@@ -17,13 +17,15 @@
 
    *
    */
-  .hero {
-    position: relative;
-    img { vertical-align: bottom; }
+  .hero { position: relative;
+    img { vertical-align: bottom; /* fix for random padding on images */ }}
+
+}
+
+@mixin hero-caption {
+  .hero-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
-    .hero-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
 }

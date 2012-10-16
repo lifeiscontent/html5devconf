@@ -5,10 +5,15 @@
   <title>Template</title>
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
-  <script type="text/javascript" src="js/libs/iepngfix_tilebg.js"></script>   <!-- Used to tile images in IE  -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://modernizr.com/downloads/modernizr.js"></script>   <!-- Feature Detection  -->
-  <script type="text/javascript" src="http://scottjehl.github.com/Respond/respond.src.js"></script>   <!-- Media Queries in IE --> 
+  <script type="text/javascript" src="http://modernizr.com/downloads/modernizr.js"></script>
+  <!-- Modernizr.js - Feature Detection  -->
+  <!-- Respond.js - Media Queries in IE -->
+  <!-- iepngfix_tilebg.js - Used to mimic background-position in IE6  -->
+  <!-- imgSizer.js Used to mimic max-height for IE6  -->
+  <!--[if IE]>
+  <script type="text/javascript" src="http://scottjehl.github.com/Respond/respond.src.js"></script>     <script type="text/javascript" src="js/libs/iepngfix_tilebg.js"></script>
+  <script type="text/javascript" src="js/libs/imgSizer.js"></script>
+  <![endif]-->
 </head>
 <body>
   <div class="l-wrapper">

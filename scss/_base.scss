@@ -1,3 +1,10 @@
+// box model debug
+// body * { outline: 1px dashed; }
+
+@include icon;
+@include hero;
+@include hero-caption;
+
 %small-font-size {
   font-size: 13px;
 }
@@ -43,15 +50,15 @@ a { text-decoration: none; }
   text-align: right;
   margin: 20px 0;
   margin-right: -27px;
-  @include base-stacked-nav;
+  @extend %base-stacked-nav;
 }
 .primary-header-menu-item {
   font-weight: bold;
   margin: 0 27px;
-  @include base-stacked-nav-item;
+  @extend %base-stacked-nav-item;
 }
 .primary-header-menu-link {
-  @include base-stacked-nav-link;
+  @extend %base-stacked-nav-link;
   padding: 10px 0;
 }
 

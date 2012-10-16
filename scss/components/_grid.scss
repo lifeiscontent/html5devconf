@@ -1,7 +1,7 @@
 %HasLayoutFix {
-  overflow:hidden;
-  *overflow:visible;
-  *zoom:1;  
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1;  
 }
 .row {
   @extend %HasLayoutFix;
@@ -11,9 +11,6 @@
 .columns {
   float: left;
   position: relative;
-}
-@for $i from 1 through $totalColumns {
-    .#{convertNumberToWords($i)} { width: gridCalc($i, $totalColumns); }
 }
 
 .column-inner,
@@ -25,14 +22,31 @@
 }
 .lastColumn {
   @extend %HasLayoutFix;
-  float:none;
-  width:auto;
-  _position:relative;
-  _left:-3px;
-  _margin-right:-3px;
+  float: none;
+  width: auto;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px;
 }
 
-@for $i from 1 through $totalColumns - 1 {
-  .push-#{convertNumberToWords($i)} { #{$defaultFloat}: gridCalc($i, $totalColumns); }
-  .pull-#{convertNumberToWords($i)} { #{$defaultOpposite}: gridCalc($i, $totalColumns); }
+@media (min-width:$rowWidth) {
+  // "desktops"
+  .row { width: $rowWidth; }
+  @for $i from 1 through $totalColumns {
+      .#{convertNumberToWords($i)} { width: gridCalc($i, $totalColumns); }
+  }
+  @for $i from 1 through $totalColumns - 1 {
+    .push-#{convertNumberToWords($i)} { #{$defaultFloat}: gridCalc($i, $totalColumns); }
+    .pull-#{convertNumberToWords($i)} { #{$defaultOpposite}: gridCalc($i, $totalColumns); }
+  }
+}
+@media (max-width:$rowWidth) {
+  // "mobile"
+  @for $i from 1 through $mobileTotalColumns {
+      .mobile-#{convertNumberToWords($i)} { width: gridCalc($i, $mobileTotalColumns) !important; }
+  }
+  @for $i from 1 through $mobileTotalColumns - 1 {
+    .mobile-push-#{convertNumberToWords($i)} { #{$defaultFloat}: gridCalc($i, $mobileTotalColumns); }
+    .mobule-pull-#{convertNumberToWords($i)} { #{$defaultOpposite}: gridCalc($i, $mobileTotalColumns); }
+  }
 }

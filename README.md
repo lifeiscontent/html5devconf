@@ -8,4 +8,4 @@ Responsive Design in IE6 and Scalable Architecture on the front-end
 > Also, if you'd like to contribute, feel free to do a pull request and explain your reasoning for the change.
 > Thanks!
 >
-> -Aaron
+- Aaron
